@@ -12,10 +12,9 @@
     float: left;
 }
 
-#profile img {
+#profile-img {
     height: 190px;
     margin-top: 4px;
     float: left;
-    margin-right: 40px;
     border-radius: 50%;
 }
