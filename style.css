@@ -12,7 +12,7 @@
     float: left;
 }
 
-#profile-img {
+.profile-img {
     height: 190px;
     margin-top: 4px;
     float: left;
