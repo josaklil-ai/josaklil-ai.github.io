@@ -1,4 +1,5 @@
 /* CSS Reset: http://meyerweb.com/eric/tools/css/reset */
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -19,7 +20,6 @@ time, mark, audio, video {
     font: inherit;
     vertical-align: baseline;
 }
-
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -82,7 +82,14 @@ h1 {
     color: #191e3f;
 }
 
-/*****************************************************************/
+/**************************************************/
+
+#header {
+    height: 100px;
+    border-bottom: 1px solid #ddd;
+}
+
+/**************************************************/
 
 #profile {
     padding: 30px 0px 15px 30px;
@@ -90,6 +97,7 @@ h1 {
 }
 
 #profile-name {
+    /*width: 100%;*/
     margin-top: 0px;
     font-size: 24px;
     line-height: 24px;
@@ -98,9 +106,212 @@ h1 {
     float: left;
 }
 
-.profile-img {
+#profile img {
     height: 190px;
     margin-top: 4px;
     float: left;
+    margin-right: 40px;
     border-radius: 50%;
+}
+
+#profile p {
+    margin-bottom: 13px;
+}
+
+#profile-desc {
+    width: 675px;
+    float: left;
+}
+
+/**************************************************/
+
+.recent-work {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.highlight-proj {
+    width: 280px;
+    margin-left: 30px;
+    float: left;
+}
+
+.highlight-proj video {
+    width: 100%;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.highlight-proj a {
+    text-decoration: none;
+    border-bottom: none;
+}
+
+.highlight-proj a:hover {
+    text-decoration: none;
+    border-bottom: none;
+}
+
+/**************************************************/
+
+
+.expandible {
+  display: none;
+}
+
+/**************************************************/
+
+.divider {
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+}
+
+ul {
+    font-size: 14px;
+    line-height: 24px;
+    list-style-position: inside;
+    /*list-style-type: disc;*/
+    color: #a0a8b0;
+}
+
+#news-dates {
+    margin: 0px 0px 0px 30px;
+    width: 90px;
+    float: left;
+}
+
+#news-items {
+    float: left;
+}
+
+.showBtn {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 24px;
+    float: left;
+}
+
+.showBtn a {
+    color: #a0a8b0;
+    cursor: pointer;
+}
+
+.showBtn a:hover {
+    border-bottom: 1px solid #a0a8b0;
+}
+
+#moreNewsDates {
+    display: none;
+}
+
+#moreNewsItems {
+    display: none;
+}
+
+#moreNewsBtn {
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+
+#lessNewsBtn {
+    display: none;
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+
+/**************************************************/
+
+.research {
+    /*padding-bottom: 30px;*/
+}
+
+.research p {
+    color: #a0a8b0;
+}
+
+.research-proj {
+    margin-left: 30px;
+    margin-bottom: 20px;
+    width: 100%;
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.research-thumb {
+    width: 180px;
+    float: left;
+    margin-top: 10px;
+    margin-right: 30px;
+    border-bottom: none;
+}
+
+.research-thumb:hover {
+    border-bottom: none;
+}
+
+.research-thumb img {
+    width: 100%;
+    /*border: 1px solid #191e3f;*/
+}
+
+.research-proj-desc {
+    width: 690px;
+    float: left;
+}
+
+.research-proj h2 {
+    color: #191e3f;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.research-proj h2 a {
+    color: #191e3f;
+}
+
+.research-proj h2 a:hover {
+    border-bottom: 1px solid #191e3f;
+}
+
+.research-proj p {
+    font-size: 14px;
+    line-height: 24px;
+    color: #a0a8b0;
+}
+
+#morePubs {
+    display: none;
+}
+
+#morePubsBtn {
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+
+#lessPubsBtn {
+    display: none;
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+
+/**************************************************/
+
+.talks {
+    margin-bottom: 30px;
+}
+
+.services ul {
+    margin-left: 30px;
+}
+
+/**************************************************/
+
+#footer p {
+    width: 100%;
+    margin-top: 120px;
+    margin-left: 30px;
+    font-size: 14px;
+    margin-bottom: 20px;
 }
