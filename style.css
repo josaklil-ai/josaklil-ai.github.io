@@ -67,7 +67,7 @@ a {
 
 a:hover {
     text-decoration: none;
-/*     border-bottom: 1px solid #a4dfce; */
+    border-bottom: 1px solid #a4dfce;
     text-decoration-color: 
 }
 
@@ -337,6 +337,8 @@ ul {
     
   display: inline-block;
   position: relative;
+    
+  border-bottom: none;
 }
 
 /* Change the color of links on hover */
