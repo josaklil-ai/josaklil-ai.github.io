@@ -361,6 +361,7 @@ ul {
 .topnav a.active {
   background-color: #49bf9d;
   border-radius: 5px;
+  padding: 3px 1px 1px 3px;
   color: white;
 }
 
