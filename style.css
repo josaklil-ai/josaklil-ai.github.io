@@ -337,7 +337,6 @@ ul {
     
   display: inline-block;
   position: relative;
-  color: #0087ca;
 }
 
 /* Change the color of links on hover */
@@ -358,7 +357,7 @@ ul {
 
 /* Add a color to the active/current link */
 .topnav a.active {
-  background-color: #04AA6D;
+  background-color: #49bf9d;
   color: white;
 }
 
