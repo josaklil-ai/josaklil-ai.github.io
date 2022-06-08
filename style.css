@@ -360,6 +360,7 @@ ul {
 /* Add a color to the active/current link */
 .topnav a.active {
   background-color: #49bf9d;
+  border-radius: 5px;
   color: white;
 }
 
