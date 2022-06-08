@@ -338,8 +338,21 @@ ul {
 
 /* Change the color of links on hover */
 .topnav a:hover {
-  background-color: #ddd;
-  color: black;
+/*   background-color: #ddd;
+  color: black; */
+  display: inline-block;
+  position: relative;
+  color: #0087ca;
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0087ca;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
 }
 
 /* Add a color to the active/current link */
@@ -347,3 +360,9 @@ ul {
   background-color: #04AA6D;
   color: white;
 }
+
+.topnav a:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
