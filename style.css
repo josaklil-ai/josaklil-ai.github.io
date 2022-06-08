@@ -318,13 +318,10 @@ ul {
 }
 
 /************/
-
-#nav {
-  width: 960px;
-}
-
 /* Add a black background color to the top navigation */
 .topnav {
+  width: 960px;
+  margin: 0px auto;
   background-color: #ffffff;
   overflow: hidden;
 }
