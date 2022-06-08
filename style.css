@@ -334,15 +334,16 @@ ul {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+    
+  display: inline-block;
+  position: relative;
+  color: #0087ca;
 }
 
 /* Change the color of links on hover */
 .topnav a:after {
 /*   background-color: #ddd;
   color: black; */
-  display: inline-block;
-  position: relative;
-  color: #0087ca;
   content: '';
   position: absolute;
   width: 100%;
