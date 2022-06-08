@@ -319,6 +319,7 @@ ul {
 
 /* Add a black background color to the top navigation */
 .topnav {
+  width: 960px;
   background-color: #ffffff;
   overflow: hidden;
 }
