@@ -67,7 +67,7 @@ a {
 
 a:hover {
     text-decoration: none;
-    border-bottom: 1px solid #a4dfce;
+/*     border-bottom: 1px solid #a4dfce; */
     text-decoration-color: 
 }
 
@@ -347,7 +347,7 @@ ul {
   position: absolute;
   width: 100%;
   transform: scaleX(0);
-  height: 2px;
+  height: 3px;
   bottom: 0;
   left: 0;
   background-color: #49bf9d;
