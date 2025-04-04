@@ -62,8 +62,8 @@
       institution: University of Denver
       year: 2019
 
-- title: Professional Services
-  type: list_groups
+- title: Services
+  type: list
   contents:
     - title: Conference Reviewer
       description: MLHC (2022-2024), DEMI@ MICCAI (2024)
