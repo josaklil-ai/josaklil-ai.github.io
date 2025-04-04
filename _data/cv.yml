@@ -63,10 +63,12 @@
       year: 2019
 
 - title: Services
-  type: list
+  type: time_table
   contents:
-    - title: Conference Reviewer
-      description: MLHC (2022-2024), DEMI@ MICCAI (2024)
+    - title: MLHC Reviewer
+      year: 2022-2024
+    - title: DEMI@ MICCAI Reviewer
+      year: 2024
 
 - title: Volunteer Experience
   type: time_table
