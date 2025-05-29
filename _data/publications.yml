@@ -32,10 +32,21 @@ main:
     notes:
     image: ./assets/img/zeal.png
 
+  - title: "Systematic evaluation of large vision-language models for surgical artificial intelligence"
+    authors: Anita Rau, Mark Endo, <strong>Josiah Aklilu</strong>, Jaewoo Heo, Khaled Saab, Alberto Paderno, Jeffrey Jopling, F. Christopher Holsinger, Serena Yeung-Levy
+    conference_short: arXiv
+    conference: <strong>arXiv</strong>, 2025.
+    pdf: https://arxiv.org/pdf/2504.02799
+    code: 
+    page: https://anitarau.github.io/surg-vlms-eval/
+    bibtex:
+    notes:
+    image: ./assets/img/surgvlm.png
+
   - title: "Artificial Intelligence identifies factors associated with blood loss and surgical experience in cholecystectomy"
     authors: <strong>Josiah Aklilu</strong>, Min Woo Sun, Shelly Goel, Sebastiano Bartoletti, Anita Rau, Griffin Olsen, Kay S Hung, Sophie L Mintz, Vicki Luong, Arnold Milstein, Mark J Ott, Robert Tibshirani, Jeffrey K Jopling, Eric C Sorenson, Dan E Azagury, Serena Yeung-Levy
     conference_short: NEJM AI
-    conference: <strong>NEJM</strong> Artificial Intelligence, 2024.
+    conference: <strong>NEJM Artificial Intelligence</strong>, 2024.
     pdf: https://ai.nejm.org/doi/full/10.1056/AIoa2300088
     code: https://github.com/josaklil-ai/lapnet
     page:
