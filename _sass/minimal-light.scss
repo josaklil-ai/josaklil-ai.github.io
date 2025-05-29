@@ -1,6 +1,6 @@
 :root {
-  --primary-color: #389cff;
-  --primary-color-dark: rgb(52, 172, 252);
+  --primary-color: #34aaff;
+  --primary-color-dark: rgb(0, 117, 242);
 }
 
 .pub-row {
@@ -275,12 +275,12 @@ h1 {
 }
 
 a {
-  color:#39c;
+  color: var(--primary-color);
   text-decoration:none;
 }
 
 a:hover {
-  color:#069;
+  color: var(--primary-color-dark);
 }
 
 @media (prefers-color-scheme: dark) {
