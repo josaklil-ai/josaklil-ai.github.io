@@ -9,9 +9,9 @@ main:
       - title: European Conference on Computer Vision (ECCV) 2022
         link: https://eccv2022.ecva.net/
 
-  Journal Reviewers:
+  # Journal Reviewers:
 
-      - title: IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)
-        link: https://www.computer.org/csdl/journal/tp
-      - title: International Journal of Computer Vision (IJCV)
-        link: https://www.springer.com/journal/11263
+  #     - title: IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)
+  #       link: https://www.computer.org/csdl/journal/tp
+  #     - title: International Journal of Computer Vision (IJCV)
+  #       link: https://www.springer.com/journal/11263

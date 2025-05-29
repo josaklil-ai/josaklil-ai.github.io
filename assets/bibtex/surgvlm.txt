@@ -1,0 +1,9 @@
+@misc{rau2025systematicevaluationlargevisionlanguage,
+      title={Systematic Evaluation of Large Vision-Language Models for Surgical Artificial Intelligence}, 
+      author={Anita Rau and Mark Endo and Josiah Aklilu and Jaewoo Heo and Khaled Saab and Alberto Paderno and Jeffrey Jopling and F. Christopher Holsinger and Serena Yeung-Levy},
+      year={2025},
+      eprint={2504.02799},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2504.02799}, 
+}
