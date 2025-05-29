@@ -70,10 +70,10 @@ blockquote { background: var(--global-bg-color); border-left: 2px solid var(--pr
     color: #000000;
     border: 1px solid transparent;
     background-color: rgba(0, 0, 0, 0.05);
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+    padding-top: 0.15rem;
+    padding-bottom: 0.15rem;
     border-radius: 0.15rem;
 }
 
@@ -82,10 +82,10 @@ blockquote { background: var(--global-bg-color); border-left: 2px solid var(--pr
         color: #FFFFFF;
         border: 1px solid transparent;
         background-color: rgba(255, 255, 255, 0.1);
-        padding-left: 0.75rem;
-        padding-right: 0.75rem;
-        padding-top: 0.25rem;
-        padding-bottom: 0.25rem;
+        padding-left: 0.7rem;
+        padding-right: 0.7rem;
+        padding-top: 0.15rem;
+        padding-bottom: 0.15rem;
         border-radius: 0.15rem;
     }
 }
