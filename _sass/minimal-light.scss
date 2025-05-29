@@ -9,14 +9,14 @@
 
 .social-icons a{
   display:inline-block;
-  height:2.4rem;
-  width:2.4rem;
+  height:3rem;
+  width:3rem;
   background-color:transparent;
   color: var(--primary-color) !important;
   border-radius:100%;
   text-align:center;
-  font-size:1.15rem;
-  line-height:2.5rem;
+  font-size:1.5rem;
+  line-height:3rem;
   margin-right:1rem}
 
 @media (prefers-color-scheme: dark) { .social-icons a {color: var(--primary-color-dark) !important; }}
