@@ -17,7 +17,7 @@
   text-align:center;
   font-size:1.5rem;
   line-height:3rem;
-  margin-right:0.5rem}
+  margin-right:0.1rem}
 
 @media (prefers-color-scheme: dark) { .social-icons a {color: var(--primary-color-dark) !important; }}
 
@@ -212,7 +212,7 @@ papertitle {
     }
 
     .image.avatar {
-      border-radius: 10px;
+      border-radius: 15px;
     }
 
       .image.avatar:before {
@@ -220,7 +220,7 @@ papertitle {
       }
 
       .image.avatar img {
-        border-radius: 10px;
+        border-radius: 15px;
         width: 80%;
         padding: 10px;
         // border: 1px solid #ddd;
