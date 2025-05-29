@@ -24,7 +24,7 @@ main:
   - title: "Zero-shot Action Localization via the Confidence of Large Vision-Language Models"
     authors: <strong>Josiah Aklilu</strong>, Xiaohan Wang, Serena Yeung-Levy
     conference_short: CVPRw
-    conference: <strong>(CVPR)</strong> Workshop on Video Large Language Models (VidLLMs), 2025.
+    conference: <strong>CVPR</strong> Workshop on Video Large Language Models (VidLLMs), 2025.
     pdf: https://arxiv.org/pdf/2410.14340
     code: https://github.com/josaklil-ai/zeal
     page:
