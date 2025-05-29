@@ -28,7 +28,7 @@ main:
     pdf: https://arxiv.org/pdf/2410.14340
     code: https://github.com/josaklil-ai/zeal
     page:
-    bibtex:
+    bibtex: ./assets/bibtex/zeal.txt
     notes:
     image: ./assets/img/zeal.png
 

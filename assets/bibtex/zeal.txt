@@ -1,0 +1,9 @@
+@misc{aklilu2025zeroshotactionlocalizationconfidence,
+      title={Zero-shot Action Localization via the Confidence of Large Vision-Language Models}, 
+      author={Josiah Aklilu and Xiaohan Wang and Serena Yeung-Levy},
+      year={2025},
+      eprint={2410.14340},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2410.14340}, 
+}
