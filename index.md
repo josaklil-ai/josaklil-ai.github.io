@@ -10,7 +10,7 @@ layout: homepage
 
 ## News
 
-- **[05/25]** Checkout our method for zero-shot action localization at the VidLLMs workshop in CVPR!
+- **[05/25]** Checkout our method for zero-shot action localization at the VidLLMs workshop in CVPR 2025!
 - **[04/25]** Our [DropQuery](https://github.com/sanketx/AL-foundation-models) method has been included in the new **[scikit-activeml](https://github.com/scikit-activeml/scikit-activeml)** AL package!
 - **[03/25]** How good are VLMs at surgical tasks? See our systematic [evaluation](https://arxiv.org/abs/2504.02799) of current SOTA in surgery!
 - **[05/24]** Checkout our latest work proposing [DropQuery](https://github.com/sanketx/AL-foundation-models): a new, simple, and effective AL strategy leveraging the representations of foundation models, accepted to TMLR!
