@@ -43,6 +43,28 @@ main:
     notes:
     image: ./assets/img/nejm_ai.png
 
+  - title: "Revisiting Active Learning in the Era of Vision Foundation Models"
+    authors: Sanket Rajan Gupte*, <strong>Josiah Aklilu*</strong>, Jeffrey J Nirschl, Serena Yeung-Levy
+    conference_short: TMLR
+    conference: <strong>Transactions on Machine Learning Research</strong>, 2024.
+    pdf: https://arxiv.org/pdf/2401.14555
+    code: https://github.com/sanketx/AL-foundation-models
+    page:
+    bibtex:
+    notes:
+    image: ./assets/img/revisit.png
+
+  - title: "Depth-guided NeRF Training via Earth Mover’s Distance"
+    authors: Anita Rau, <strong>Josiah Aklilu</strong>, F. Christopher Holsinger, and Serena Yeung-Levy
+    conference_short: ECCV
+    conference: <strong>European Conference on Computer Vision</strong>, 2024.
+    pdf: https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/08062.pdf
+    code: https://github.com/anitarau/EMD-NeRF
+    page: https://anitarau.github.io/emd-nerf.github.io/
+    bibtex:
+    notes:
+    image: ./assets/img/depth.png
+
   - title: "ALGES: Active learning with gradient embeddings for semantic segmentation of laparoscopic surgical images"
     authors: <strong>Josiah Aklilu</strong>, Serena Yeung-Levy
     conference_short: MLHC
