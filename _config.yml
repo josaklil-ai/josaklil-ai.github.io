@@ -2,7 +2,8 @@
 title: Josiah Aklilu
 position: Ph.D. Student
 affiliation: Stanford University
-email: josaklil (at) stanford.edu
+affiliation_link: https://stanford.edu/
+email: josaklil@stanford.edu
 
 # Search Engine Optimization (SEO)
 # The following information is used to improve the website traffic from search engines, e.g., Google.
@@ -34,7 +35,7 @@ auto_dark_mode: true
 
 # Font
 # You can use this option to choose between Serif or Sans Serif fonts.
-font: "Sans Serif" # or "Sans Serif"
+font: "Serif" # or "Sans Serif"
 
 # Google Analytics ID
 # Please remove this if you don't use Google Analytics
