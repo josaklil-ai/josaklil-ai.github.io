@@ -31,3 +31,25 @@ main:
     bibtex:
     notes:
     image: ./assets/img/zeal.png
+
+  - title: "Artificial Intelligence identifies factors associated with blood loss and surgical experience in cholecystectomy"
+    authors: <strong>Josiah Aklilu</strong>, Min Woo Sun, Shelly Goel, Sebastiano Bartoletti, Anita Rau, Griffin Olsen, Kay S Hung, Sophie L Mintz, Vicki Luong, Arnold Milstein, Mark J Ott, Robert Tibshirani, Jeffrey K Jopling, Eric C Sorenson, Dan E Azagury, Serena Yeung-Levy
+    conference_short: NEJM AI
+    conference: <strong>NEJM</strong> Artificial Intelligence, 2024.
+    pdf: https://ai.nejm.org/doi/full/10.1056/AIoa2300088
+    code: https://github.com/josaklil-ai/lapnet
+    page:
+    bibtex:
+    notes:
+    image: ./assets/img/nejm_ai.png
+
+  - title: "ALGES: Active learning with gradient embeddings for semantic segmentation of laparoscopic surgical images"
+    authors: <strong>Josiah Aklilu</strong>, Serena Yeung-Levy
+    conference_short: MLHC
+    conference: <strong>Machine Learning for Health Care</strong>, 2022.
+    pdf: https://proceedings.mlr.press/v182/aklilu22a/aklilu22a.pdf
+    code: https://github.com/josaklil-ai/surg-active-learning
+    page:
+    bibtex:
+    notes:
+    image: ./assets/img/alges.png
