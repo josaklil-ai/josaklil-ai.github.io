@@ -62,6 +62,6 @@ main:
     pdf: https://proceedings.mlr.press/v182/aklilu22a/aklilu22a.pdf
     code: https://github.com/josaklil-ai/surg-active-learning
     page:
-    bibtex:
+    bibtex: ./assets/bibtex/alges.txt
     notes:
     image: ./assets/img/alges.png
