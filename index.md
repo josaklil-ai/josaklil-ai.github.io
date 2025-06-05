@@ -10,6 +10,7 @@ layout: homepage
 
 ## News
 
-- **[05/25]** Checkout our method for zero-shot action localization at the VidLLMs workshop in CVPR 2025!
+- **[05/25]** Co-organizing the 1st Workshop on Multimodal Foundation Models for Biomedicine [(MMFM-BIOMED)](https://sites.google.com/view/mmfm-biomed-2025/). Visit our poster session [@CVPR2025](https://cvpr.thecvf.com/)!
+- **[05/25]** Checkout our method for zero-shot action localization accepted to the VidLLMs Workshop [@CVPR2025](https://cvpr.thecvf.com/)!
 - **[04/25]** Our [DropQuery](https://github.com/sanketx/AL-foundation-models) method has been included in the new **[scikit-activeml](https://github.com/scikit-activeml/scikit-activeml)** AL package!
 - **[03/25]** How good are VLMs at surgical tasks? See our systematic [evaluation](https://arxiv.org/abs/2504.02799) of current SOTA in surgery!
