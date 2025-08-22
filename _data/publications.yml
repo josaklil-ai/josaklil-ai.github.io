@@ -65,3 +65,14 @@ main:
     bibtex: ./assets/bibtex/alges.txt
     notes:
     image: ./assets/img/alges.png
+
+  - title: "Using artificial intelligence to model expert panel diagnosis of cholecystitis severity"
+    authors: Griffin H Olsen, Emmett D Goodman, <strong>Josiah G Aklilu</strong>, Sebastiano Bartoletti, Kay S Hung, Janice H Yang, Eric C Sorenson, Jeffrey K Jopling, Serena Y Yeung, Dan E Azagury
+    conference_short: Surg Endosc
+    conference: <strong>Surgical Endoscopy</strong>, 2025.
+    pdf: https://link.springer.com/article/10.1007/s00464-025-12015-6
+    code:
+    page:
+    bibtex: ./assets/bibtex/pgs.txt
+    notes:
+    image: ./assets/img/pgs.png
