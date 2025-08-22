@@ -1,0 +1,51 @@
+@ARTICLE{Olsen2025-qw,
+  title     = "Using artificial intelligence to model expert panel diagnosis of
+               cholecystitis severity",
+  author    = "Olsen, Griffin H and Goodman, Emmett D and Aklilu, Josiah G and
+               Bartoletti, Sebastiano and Hung, Kay S and Yang, Janice H and
+               Sorenson, Eric C and Jopling, Jeffrey K and Yeung, Serena Y and
+               Azagury, Dan E",
+  abstract  = "BACKGROUND: Determining cholecystitis severity via the
+               clinically validated Parkland Grading Scale (PGS) is useful for
+               predicting case difficulty and likelihood of postoperative
+               complications. A panel assessment by multiple surgeons can
+               reduce variation in PGS due to subjectivity, but is
+               time-consuming. An artificial intelligence (AI) model trained on
+               the assessments of an expert clinician panel may improve
+               efficiency and reduce variability in diagnosis in image-based
+               assessments. METHODS: Laparoscopic cholecystectomy videos were
+               obtained from one public and two private data sources.
+               Representative frames were chosen for PGS grading and manually
+               labeled. Three surgical experts independently assigned PGS
+               scores to the selected frames. They then convened as a panel to
+               decide on the score if those were discrepant at individual
+               scoring. Weighted Cohen's kappa statistic was measured for
+               inter-rater variability. Two AI models were developed for
+               automated PGS grading and their accuracy and interpretability
+               evaluated. RESULTS: 319 videos were compiled. Three surgical
+               experts independently assigned identical PGS grades for 51\% of
+               cases, and weighted Cohen's kappa statistics ranged between 0.76
+               and 0.83. The accuracy of Model A using absolute agreement with
+               the expert panel's consensus was 69\%, and weighted Cohen's
+               kappa statistic was 0.62. The accuracy of Model B using absolute
+               agreement with the panel's consensus was 72\%, and weighted
+               Cohen's kappa statistic was 0.77. Interpretability analysis was
+               conducted. Three anatomical structures played a key role in
+               Model B's grading of cholecystitis severity: the appearance of
+               the gallbladder, liver, and omentum had notable impact on
+               performance. CONCLUSIONS: A transformer-based AI model can be
+               trained on consensus from an expert panel to predict ratings of
+               cholecystitis severity (Parking Grading Scale), performing
+               competitively with some individual experts at predicting PGS
+               when compared to the panel-based ground truth. However, variance
+               and subjectivity of PGS remain, thus presenting its limitations
+               as a ground truth for computer vision-based models.",
+  journal   = "Surg. Endosc.",
+  publisher = "Springer Science and Business Media LLC",
+  month     =  aug,
+  year      =  2025,
+  keywords  = "Artificial intelligence; Cholecystitis; Computer vision;
+               Diagnosis prediction; Inter-rater variability",
+  copyright = "https://creativecommons.org/licenses/by-nc-nd/4.0",
+  language  = "en"
+}
