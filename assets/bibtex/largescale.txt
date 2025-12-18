@@ -1,0 +1,9 @@
+@misc{lozano2025largescalevisionlanguagedatasetderived,
+      title={A Large-Scale Vision-Language Dataset Derived from Open Scientific Literature to Advance Biomedical Generalist AI}, 
+      author={Alejandro Lozano and Min Woo Sun and James Burgess and Jeffrey J. Nirschl and Christopher Polzak and Yuhui Zhang and Liangyu Chen and Jeffrey Gu and Ivan Lopez and Josiah Aklilu and Anita Rau and Austin Wolfgang Katzer and Collin Chiu and Orr Zohar and Xiaohan Wang and Alfred Seunghoon Song and Chiang Chia-Chun and Robert Tibshirani and Serena Yeung-Levy},
+      year={2025},
+      eprint={2503.22727},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2503.22727}, 
+}

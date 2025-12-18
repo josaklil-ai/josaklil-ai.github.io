@@ -1,0 +1,8 @@
+@article{aklilu_automated_2025,
+	title = {Automated {Video}-{Based} {Analysis} of {Surgical} {Meta}-competencies {Using} {Computer} {Vision}},
+	url = {https://www.medrxiv.org/content/early/2025/11/27/2025.11.24.25340912},
+	doi = {10.1101/2025.11.24.25340912},
+	journal = {medRxiv},
+	author = {Aklilu, Josiah and Villarreal, Joshua A. and Nobuhara, Chloe K. and Egeland, Charlotte and Wang, Xiaohan and Sui, Elaine and Brown, Alan and Leipzig, Matthew and Dale, Reid and Rau, Anita and Song, Alfred and Goel, Shelly and Sorenson, Eric and Palter, Vanessa and Bohn, Roger and Grantcharov, Teodor and Jopling, Jeffrey K. and Yeung-Levy, Serena},
+	year = {2025},
+}

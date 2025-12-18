@@ -600,16 +600,3 @@ footer {
   display:none;
   font-family: monospace;
 }
-.highlight-pub {
-  background-color: #f7f9f9;
-  border-radius: 15px;
-  padding: 15px; /* Added padding for the panel effect */
-  margin-bottom: 5px; /* Adjust spacing */
-}
-
-@media (prefers-color-scheme: dark) {
-  .highlight-pub {
-    background-color: #2a2b36;
-  }
-}
-

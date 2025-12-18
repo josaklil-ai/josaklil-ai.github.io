@@ -1,5 +1,17 @@
 main:
 
+  - title: "Automated Video-Based Analysis of Surgical Meta-competencies Using Computer Vision"
+    authors: <strong>Josiah Aklilu*</strong>, Joshua A. Villarreal*, Chloe K. Nobuhara, Charlotte Egeland, Xiaohan Wang, Elaine Sui, Alan Brown, Matthew Leipzig, Reid Dale, Anita Rau, Alfred Song, Shelly Goel, Eric C. Sorenson, Vanessa Palter, Roger Bohn, Teodor Grantcharov, Jeffrey K. Jopling, Serena Yeung-Levy
+    conference_short: medRxiv
+    conference: <strong>medRxiv</strong>, 2025.
+    highlight: true
+    pdf: https://www.medrxiv.org/content/10.1101/2025.11.24.25340912v1.full.pdf
+    code:
+    page:
+    bibtex: ./assets/bibtex/mc1.txt
+    notes:
+    image: ./assets/img/mc1.png
+
   - title: "Zero-shot Action Localization via the Confidence of Large Vision-Language Models"
     authors: <strong>Josiah Aklilu</strong>, Xiaohan Wang, Serena Yeung-Levy
     conference_short: CVPRw
@@ -16,11 +28,33 @@ main:
     conference_short: arXiv
     conference: <strong>arXiv</strong>, 2025.
     pdf: https://arxiv.org/pdf/2504.02799
-    code: 
+    code: https://github.com/anitarau/SurgBenchKit
     page: https://anitarau.github.io/surg-vlms-eval/
     bibtex: ./assets/bibtex/surgvlm.txt 
     notes:
     image: ./assets/img/surgvlm.png
+
+  - title: "BIOMEDICA: An Open Biomedical Image-Caption Archive, Dataset, and Vision-Language Models Derived from Scientific Literature"
+    authors: Alejandro Lozano, Min Woo Sun, James Burgess, Liangyu Chen, Jeffrey J Nirschl, Jeffrey Gu, Ivan Lopez, <strong>Josiah Aklilu</strong>, Austin Wolfgang Katzer, Collin Chiu, Anita Rau, Xiaohan Wang, Yuhui Zhang, Alfred Seunghoon Song, Robert Tibshirani, Serena Yeung-Levy
+    conference_short: CVPR
+    conference: <strong>CVPR</strong>, 2025.
+    pdf: https://arxiv.org/pdf/2501.07171
+    code: https://github.com/minwoosun/biomedica-etl
+    page: https://minwoosun.github.io/biomedica-website/
+    bibtex: ./assets/bibtex/biomedica.txt
+    notes:
+    image: ./assets/img/biomedica.png
+
+  - title: "Large-scale vision-language dataset derived from open scientific literature to advance biomedical generalist AI"
+    authors: Alejandro Lozano, Min Woo Sun, James Burgess, Jeffrey J Nirschl, Christopher Polzak, Yuhui Zhang, Liangyu Chen, Jeffrey Gu, Ivan Lopez, <strong>Josiah Aklilu</strong>, Anita Rau, Austin Wolfgang Katzer, Collin Chiu, Orr Zohar, Xiaohan Wang, Alfred Seunghoon Song, Chiang Chia-Chun, Robert Tibshirani, Serena Yeung-Levy
+    conference_short: arXiv
+    conference: <strong>arXiv</strong>, 2025.
+    pdf: https://arxiv.org/pdf/2503.22727
+    code: https://github.com/minwoosun/largescale-vl-dataset
+    page:
+    bibtex: ./assets/bibtex/largescale.txt
+    notes:
+    image: ./assets/img/largescale.png
 
   - title: "Artificial Intelligence identifies factors associated with blood loss and surgical experience in cholecystectomy"
     authors: <strong>Josiah Aklilu</strong>, Min Woo Sun, Shelly Goel, Sebastiano Bartoletti, Anita Rau, Griffin Olsen, Kay S Hung, Sophie L Mintz, Vicki Luong, Arnold Milstein, Mark J Ott, Robert Tibshirani, Jeffrey K Jopling, Eric C Sorenson, Dan E Azagury, Serena Yeung-Levy
