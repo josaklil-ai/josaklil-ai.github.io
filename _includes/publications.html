@@ -1,6 +1,6 @@
 {% if site.data.publications %}
 
-<h2 id="publications" style="margin: 2px 0px -15px;">Publications</h2>
+<h2 id="publications" style="margin: 2px 0px -15px;">Publications & Preprints</h2>
 
 <div class="publications">
   <ol class="bibliography">
@@ -25,35 +25,50 @@
         </div>
         <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
           <div class="title"><a href="{{ link.pdf }}">{{ link.title }}</a></div>
-          <div class="author">{{ link.authors }}</div>
-          <div class="periodical"><em>{{ link.conference }}</em>
-          </div>
-          <div class="links">
-            {% if link.pdf %}
-            <a href="{{ link.pdf }}" class="btn btn-sm z-depth-0" role="button" target="_blank"
-              style="font-size:12px;">PDF</a>
-            {% endif %}
-            {% if link.code %}
-            <a href="{{ link.code }}" class="btn btn-sm z-depth-0" role="button" target="_blank"
-              style="font-size:12px;">Code</a>
-            {% endif %}
-            {% if link.page %}
-            <a href="{{ link.page }}" class="btn btn-sm z-depth-0" role="button" target="_blank"
-              style="font-size:12px;">Project Page</a>
-            {% endif %}
-            {% if link.bibtex %}
-            <a href="{{ link.bibtex }}" class="btn btn-sm z-depth-0" role="button" target="_blank"
-              style="font-size:12px;">BibTex</a>
-            {% endif %}
-            {% if link.notes %}
-            <strong> <i style="color:#e74d3c">{{ link.notes }}</i></strong>
-            {% endif %}
-            {% if link.others %}
-            {{ link.others }}
-            {% endif %}
+          <div class="author">
+            {% assign author_array = link.authors | split: ', ' %}
+            {% assign author_count = author_array | size %}
+            {% assign user_index = -1 %}
+            {% for author in author_array %}
+            {% if author contains '<strong>' %}
+              {% assign user_index = forloop.index0 %}
+              {% break %}
+              {% endif %}
+              {% endfor %}
+
+              {% if author_count <= 5 %} {{ link.authors }} {% else %} {% if user_index < 5 %} {% for author in
+                author_array limit:5 %} {{ author }}{% unless forloop.last %}, {% endunless %} {% endfor %} , ... {%
+                else %} {{ author_array[0] }}, {{ author_array[1] }}, ... {% assign second_to_last_index=author_count |
+                minus: 2 %} {% if user_index < second_to_last_index %} , {{ author_array[user_index] }}, ... {% endif %}
+                , {{ author_array[second_to_last_index] }}, {{ author_array | last }} {% endif %} {% endif %} </div>
+                <div class="periodical"><em>{{ link.conference }}</em>
+                </div>
+                <div class="links">
+                  {% if link.pdf %}
+                  <a href="{{ link.pdf }}" class="btn btn-sm z-depth-0" role="button" target="_blank"
+                    style="font-size:12px;">PDF</a>
+                  {% endif %}
+                  {% if link.code %}
+                  <a href="{{ link.code }}" class="btn btn-sm z-depth-0" role="button" target="_blank"
+                    style="font-size:12px;">Code</a>
+                  {% endif %}
+                  {% if link.page %}
+                  <a href="{{ link.page }}" class="btn btn-sm z-depth-0" role="button" target="_blank"
+                    style="font-size:12px;">Project Page</a>
+                  {% endif %}
+                  {% if link.bibtex %}
+                  <a href="{{ link.bibtex }}" class="btn btn-sm z-depth-0" role="button" target="_blank"
+                    style="font-size:12px;">BibTex</a>
+                  {% endif %}
+                  {% if link.notes %}
+                  <strong> <i style="color:#e74d3c">{{ link.notes }}</i></strong>
+                  {% endif %}
+                  {% if link.others %}
+                  {{ link.others }}
+                  {% endif %}
+                </div>
           </div>
         </div>
-      </div>
     </li>
     <br>
 
