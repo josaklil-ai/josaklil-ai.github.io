@@ -23,6 +23,17 @@ main:
     notes:
     image: ./assets/img/zeal.png
 
+  - title: "AutoConverter: Automated Generation of Challenging Multiple-Choice Questions for Vision Language Model Evaluation"
+    authors: Yuhui Zhang, Yuchang Su, Yiming Liu, Xiaohan Wang, James Burgess, Elaine Sui, Chenyu Wang, <strong>Josiah Aklilu</strong>, Alejandro Lozano, Anjiang Wei, Ludwig Schmidt, Serena Yeung-Levy
+    conference_short: CVPR
+    conference: <strong>CVPR</strong>, 2025.
+    pdf: https://openaccess.thecvf.com/content/CVPR2025/papers/Zhang_Automated_Generation_of_Challenging_Multiple-Choice_Questions_for_Vision_Language_Model_CVPR_2025_paper.pdf
+    code: https://github.com/yuhui-zh15/autoconverter
+    page: https://yuhui-zh15.github.io/AutoConverter-Website/
+    bibtex: ./assets/bibtex/autoconverter.txt
+    notes:
+    image: ./assets/img/autoconverter.png
+
   - title: "Systematic evaluation of large vision-language models for surgical artificial intelligence"
     authors: Anita Rau, Mark Endo, <strong>Josiah Aklilu</strong>, Jaewoo Heo, Khaled Saab, Alberto Paderno, Jeffrey Jopling, F. Christopher Holsinger, Serena Yeung-Levy
     conference_short: arXiv
