@@ -16,6 +16,7 @@ main:
     authors: <strong>Josiah Aklilu</strong>, Xiaohan Wang, Serena Yeung-Levy
     conference_short: CVPRw
     conference: <strong>CVPR Workshop on Video Large Language Models</strong>, 2025.
+    highlight: true
     pdf: https://arxiv.org/pdf/2410.14340
     code: https://github.com/josaklil-ai/zeal
     page:
@@ -38,6 +39,7 @@ main:
     authors: Anita Rau, Mark Endo, <strong>Josiah Aklilu</strong>, Jaewoo Heo, Khaled Saab, Alberto Paderno, Jeffrey Jopling, F. Christopher Holsinger, Serena Yeung-Levy
     conference_short: arXiv
     conference: <strong>arXiv</strong>, 2025.
+    highlight: true
     pdf: https://arxiv.org/pdf/2504.02799
     code: https://github.com/anitarau/SurgBenchKit
     page: https://anitarau.github.io/surg-vlms-eval/
@@ -71,6 +73,7 @@ main:
     authors: <strong>Josiah Aklilu</strong>, Min Woo Sun, Shelly Goel, Sebastiano Bartoletti, Anita Rau, Griffin Olsen, Kay S Hung, Sophie L Mintz, Vicki Luong, Arnold Milstein, Mark J Ott, Robert Tibshirani, Jeffrey K Jopling, Eric C Sorenson, Dan E Azagury, Serena Yeung-Levy
     conference_short: NEJM AI
     conference: <strong>NEJM Artificial Intelligence</strong>, 2024.
+    highlight: true
     pdf: https://ai.nejm.org/doi/full/10.1056/AIoa2300088
     code: https://github.com/josaklil-ai/lapnet
     page:
@@ -82,6 +85,7 @@ main:
     authors: Sanket Rajan Gupte*, <strong>Josiah Aklilu*</strong>, Jeffrey J Nirschl, Serena Yeung-Levy
     conference_short: TMLR
     conference: <strong>Transactions on Machine Learning Research</strong>, 2024.
+    highlight: true
     pdf: https://arxiv.org/pdf/2401.14555
     code: https://github.com/sanketx/AL-foundation-models
     page:
@@ -104,6 +108,7 @@ main:
     authors: <strong>Josiah Aklilu</strong>, Serena Yeung-Levy
     conference_short: MLHC
     conference: <strong>Machine Learning for Health Care</strong>, 2022.
+    highlight: true
     pdf: https://proceedings.mlr.press/v182/aklilu22a/aklilu22a.pdf
     code: https://github.com/josaklil-ai/surg-active-learning
     page:
