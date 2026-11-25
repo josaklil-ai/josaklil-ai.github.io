@@ -1,0 +1,545 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { publications } from '../data/publications';
+
+const newsItems = [
+  {
+    date: '10/26',
+    html: 'Released <a href="https://arxiv.org/abs/2610.37364" target="_blank" rel="noopener noreferrer" class="font-medium text-[#5E89C0] underline decoration-[#A8C4E8] underline-offset-2 hover:text-[#4870A6]">EmbeddingGemma 2</a> for unified multimodal representations.',
+  },
+  {
+    date: '01/26',
+    html: 'Joined <strong class="font-medium text-[#0F172A]">Google DeepMind</strong> as a Research Engineer working on embedding models.',
+  },
+  {
+    date: '12/25',
+    html: 'Successfully defended my Ph.D. dissertation, <em>"Foundations for Large-Scale Analysis of Laparoscopic Surgery with Computer Vision."</em>',
+  },
+  {
+    date: '05/25',
+    html: 'Co-organized the 1st Workshop on Multimodal Foundation Models for Biomedicine (<a href="https://sites.google.com/view/mmfm-biomed-2025/" target="_blank" rel="noopener noreferrer" class="font-medium text-[#5E89C0] underline decoration-[#A8C4E8] underline-offset-2 hover:text-[#4870A6]">MMFM-BIOMED</a>) at CVPR 2025.',
+  },
+  {
+    date: '05/25',
+    html: 'Zero-shot action localization (<a href="https://arxiv.org/abs/2410.14340" target="_blank" rel="noopener noreferrer" class="font-medium text-[#5E89C0] underline decoration-[#A8C4E8] underline-offset-2 hover:text-[#4870A6]">ZEAL</a>) accepted to the VidLLMs Workshop at CVPR 2025.',
+  },
+  {
+    date: '04/25',
+    html: 'Our <a href="https://github.com/sanketx/AL-foundation-models" target="_blank" rel="noopener noreferrer" class="font-medium text-[#5E89C0] underline decoration-[#A8C4E8] underline-offset-2 hover:text-[#4870A6]">DropQuery</a> method was added to the <a href="https://github.com/scikit-activeml/scikit-activeml" target="_blank" rel="noopener noreferrer" class="font-medium text-[#5E89C0] underline decoration-[#A8C4E8] underline-offset-2 hover:text-[#4870A6]">scikit-activeml</a> package.',
+  },
+];
+
+const filters = [
+  { id: 'all', label: 'All' },
+  { id: 'first-author', label: 'First-Author' },
+  { id: 'surgical-ai', label: 'Surgical AI' },
+  { id: 'multimodal', label: 'Multimodal & VLMs' },
+  { id: 'preprint', label: 'Preprints / WIP' },
+];
+
+const researchInterests = [
+  'Embedding Models',
+  'Multimodal & Video Understanding',
+  'Vision-Language Models',
+  'Surgical Computer Vision',
+  'Active Learning',
+];
+
+const highlightMe = (name: string) =>
+  /Josiah/i.test(name)
+    ? `<strong class="font-semibold text-[#0F172A] underline decoration-[#A8C4E8] decoration-2 underline-offset-2">${name}</strong>`
+    : name;
+
+function formatAuthors(authorStr: string) {
+  const list = authorStr
+    .split(/,\s*/)
+    .map((s) => s.trim())
+    .filter((s) => Boolean(s) && !/^et\s+al\.?$/i.test(s));
+
+  const fullHtml = list.map(highlightMe).join(', ');
+
+  if (list.length <= 6) {
+    return { isLong: false, shortHtml: fullHtml, fullHtml, hiddenCount: 0 };
+  }
+
+  const myIdx = list.findIndex((a) => /Josiah/i.test(a));
+  const lastIdx = list.length - 1;
+  const shown = new Set<number>([0, 1, 2]);
+  if (myIdx !== -1) shown.add(myIdx);
+  if (lastIdx > 2) shown.add(lastIdx);
+
+  const sorted = Array.from(shown).sort((a, b) => a - b);
+  const parts: string[] = [];
+
+  for (let i = 0; i < sorted.length; i++) {
+    const idx = sorted[i];
+    if (i > 0 && idx > sorted[i - 1] + 1) {
+      parts.push('<span class="text-[#94A3B8]">…</span>');
+    }
+    parts.push(highlightMe(list[idx]));
+  }
+
+  const shortHtml = parts
+    .join(', ')
+    .replace(/,\s*(<span class="text-\[#94A3B8\]">…<\/span>)/g, ' $1')
+    .replace(/(<span class="text-\[#94A3B8\]">…<\/span>),\s*/g, '$1 ');
+
+  const hiddenCount = Math.max(list.length - sorted.length, 1);
+
+  return { isLong: true, shortHtml, fullHtml, hiddenCount };
+}
+---
+
+<Layout>
+  <div class="mx-auto max-w-[1100px] px-5 py-10 sm:px-8 md:py-16">
+    <div class="grid grid-cols-1 gap-10 md:grid-cols-[260px_1fr] md:gap-14">
+      <!-- Left Sticky Sidebar -->
+      <aside class="md:sticky md:top-12 md:self-start">
+        <div class="flex flex-col items-center text-center">
+          <img
+            src="/img/prof_pic.jpg"
+            alt="Josiah Aklilu"
+            class="h-44 w-44 sm:h-48 sm:w-48 rounded-2xl object-cover shadow-sm"
+          />
+
+          <h1 class="mt-5 text-[26px] font-semibold tracking-tight text-[#0F172A]">
+            Josiah Aklilu
+          </h1>
+          <p class="mt-1 text-[15px] font-medium text-[#5E89C0]">
+            Research Engineer
+          </p>
+          <p class="mt-0.5 text-[15px] font-medium text-[#334155]">
+            Google DeepMind
+          </p>
+          <p class="mt-0.5 text-sm text-[#64748B]">
+            Mountain View, CA
+          </p>
+
+          <button
+            id="copy-email-btn"
+            type="button"
+            data-email="josaklil@alumni.stanford.edu"
+            class="mt-3 inline-flex items-center gap-1.5 text-[13px] font-medium text-[#475569] transition hover:text-[#5E89C0] cursor-pointer"
+            title="Click to copy email"
+          >
+            <span>josaklil@alumni.stanford.edu</span>
+            <span class="text-xs text-[#94A3B8]">(copy)</span>
+          </button>
+
+          <!-- Social Icons -->
+          <div class="mt-5 flex items-center justify-center gap-4">
+            <a
+              href="https://scholar.google.com/citations?user=3ZzdylMAAAAJ&hl=en"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Google Scholar"
+              title="Google Scholar"
+              class="text-[#0F172A] transition hover:text-[#5E89C0]"
+            >
+              <i class="ai ai-google-scholar text-[22px]"></i>
+            </a>
+            <a
+              href="/files/josiah_aklilu_curriculum_vitae.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Curriculum Vitae"
+              title="CV (PDF)"
+              class="text-[#0F172A] transition hover:text-[#5E89C0]"
+            >
+              <i class="ai ai-cv text-[22px]"></i>
+            </a>
+            <a
+              href="https://github.com/josaklil-ai"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+              title="GitHub"
+              class="text-[#0F172A] transition hover:text-[#5E89C0]"
+            >
+              <i class="fab fa-github text-[20px]"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/josiah-aklilu/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              title="LinkedIn"
+              class="text-[#0F172A] transition hover:text-[#5E89C0]"
+            >
+              <i class="fab fa-linkedin text-[20px]"></i>
+            </a>
+            <a
+              href="https://x.com/AkliluJosiah2"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="X"
+              title="X"
+              class="text-[#0F172A] transition hover:text-[#5E89C0]"
+            >
+              <i class="fab fa-x-twitter text-[20px]"></i>
+            </a>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Right Main Column -->
+      <main class="min-w-0 space-y-10">
+        <!-- About Me -->
+        <section id="about">
+          <h2 class="border-b border-[#EEF2F6] pb-2.5 text-xl font-semibold tracking-tight text-[#0F172A]">
+            About Me
+          </h2>
+          <p class="mt-4 text-[16px] leading-[1.7] text-[#334155]">
+            I am a Research Engineer at <strong class="font-medium text-[#0F172A]">Google DeepMind</strong> working on
+            <strong class="font-medium text-[#0F172A]">embedding models</strong>. I earned my Ph.D. in Biomedical Data Science from
+            <strong class="font-medium text-[#0F172A]">Stanford University</strong>, where I was gratefully advised by Prof.
+            <a href="https://ai.stanford.edu/~syyeung/" target="_blank" rel="noopener noreferrer" class="font-medium text-[#5E89C0] underline decoration-[#A8C4E8] underline-offset-3 hover:text-[#4870A6] hover:decoration-[#5E89C0]">Serena Yeung-Levy</a>
+            in the <a href="https://marvl.stanford.edu/index.html" target="_blank" rel="noopener noreferrer" class="font-medium text-[#5E89C0] underline decoration-[#A8C4E8] underline-offset-3 hover:text-[#4870A6] hover:decoration-[#5E89C0]">MARVL</a> lab,
+            focusing on large-scale computer vision for <strong class="font-medium text-[#0F172A]">laparoscopic surgery</strong>.
+            During my Ph.D., I also interned on multimodal video–IMU modeling at <strong class="font-medium text-[#0F172A]">Apple Health AIML</strong>
+            and self-supervised 3D medical vision with Hoifung's group at <strong class="font-medium text-[#0F172A]">Microsoft Research</strong>.
+          </p>
+        </section>
+
+        <!-- Compact Scrollable News -->
+        <section id="news">
+          <h2 class="border-b border-[#EEF2F6] pb-2 text-base font-semibold tracking-tight text-[#0F172A]">
+            News
+          </h2>
+          <div class="news-scroll mt-3 max-h-[136px] overflow-y-auto rounded-[10px] border border-[#E8EDF4] bg-[#FAFBFC] px-4 py-2.5">
+            <ul class="divide-y divide-[#EEF2F6]">
+              {newsItems.map((item) => (
+                <li class="flex items-baseline gap-3 py-2 first:pt-0.5 last:pb-0.5 text-[13.5px] leading-snug text-[#334155]">
+                  <span class="shrink-0 rounded border border-[#C9DDF4] bg-[#F3F8FE] px-1.5 py-0.5 font-mono text-[11px] font-medium text-[#5E89C0] tabular-nums">
+                    {item.date}
+                  </span>
+                  <span set:html={item.html} />
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        <!-- Research Interests -->
+        <section id="interests">
+          <h2 class="border-b border-[#EEF2F6] pb-2.5 text-xl font-semibold tracking-tight text-[#0F172A]">
+            Research Interests
+          </h2>
+          <div class="mt-4 flex flex-wrap gap-2">
+            {researchInterests.map((interest) => (
+              <span class="rounded-md border border-[#C9DDF4] bg-[#F3F8FE] px-3 py-1 text-[13px] font-medium text-[#4870A6]">
+                {interest}
+              </span>
+            ))}
+          </div>
+        </section>
+
+        <!-- Publications -->
+        <section id="publications">
+          <div class="flex flex-col gap-3 border-b border-[#EEF2F6] pb-3 sm:flex-row sm:items-center sm:justify-between">
+            <h2 class="text-xl font-semibold tracking-tight text-[#0F172A]">
+              Publications <span id="pub-count" class="ml-1 text-[15px] font-normal text-[#64748B]">({publications.length})</span>
+            </h2>
+            <input
+              id="pub-search"
+              type="search"
+              placeholder="Search papers, venues, authors..."
+              class="w-full rounded-md border border-[#E2E8F0] bg-white px-3.5 py-2 text-sm text-[#0F172A] placeholder-[#94A3B8] focus:border-[#5E89C0] focus:outline-none sm:w-68"
+            />
+          </div>
+
+          <!-- Filter Chips -->
+          <div class="mt-4 flex flex-wrap gap-2" id="pub-filters">
+            {filters.map((f, idx) => (
+              <button
+                type="button"
+                data-filter={f.id}
+                class={`filter-btn rounded-md px-3 py-1.5 text-[13px] font-medium transition cursor-pointer ${
+                  idx === 0
+                    ? 'border border-[#5E89C0] bg-[#5E89C0] text-white'
+                    : 'border border-[#E8EDF4] bg-[#FAFBFC] text-[#475569] hover:border-[#A8C4E8] hover:bg-[#F3F8FE] hover:text-[#4870A6]'
+                }`}
+              >
+                {f.label}
+              </button>
+            ))}
+          </div>
+
+          <!-- Publication Cards -->
+          <div id="pub-list" class="mt-5 space-y-4">
+            {publications.map((pub) => {
+              const tags = pub.categories.join(',');
+              const searchBlob = `${pub.title} ${pub.authors} ${pub.venue} ${pub.year}`.toLowerCase();
+              const primaryUrl = pub.links?.pdf ?? pub.links?.paper ?? pub.links?.arxiv;
+              const authorData = formatAuthors(pub.authors);
+
+              return (
+                <article
+                  class="pub-card p-4 sm:p-5"
+                  data-tags={tags}
+                  data-search={searchBlob}
+                >
+                  <div class="flex flex-col gap-4 sm:flex-row sm:gap-5">
+                    {pub.image && (
+                      <div class="shrink-0 sm:w-44">
+                        <div class="overflow-hidden rounded-md border border-[#E8EDF4] bg-white p-1 shadow-[0_1px_2px_rgba(15,23,42,0.03)]">
+                          {primaryUrl ? (
+                            <a href={primaryUrl} target="_blank" rel="noopener noreferrer" class="block">
+                              <img
+                                src={pub.image}
+                                alt={pub.title}
+                                loading="lazy"
+                                class="h-40 w-full rounded-[4px] object-cover sm:h-28"
+                              />
+                            </a>
+                          ) : (
+                            <img
+                              src={pub.image}
+                              alt={pub.title}
+                              loading="lazy"
+                              class="h-40 w-full rounded-[4px] object-cover sm:h-28"
+                            />
+                          )}
+                        </div>
+                      </div>
+                    )}
+
+                    <div class="min-w-0 flex-1">
+                      <h3 class="text-[16px] font-semibold leading-snug text-[#0F172A]">
+                        {primaryUrl ? (
+                          <a
+                            href={primaryUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="transition hover:text-[#5E89C0]"
+                          >
+                            {pub.title}
+                          </a>
+                        ) : (
+                          pub.title
+                        )}
+                      </h3>
+
+                      <!-- Venue card right after title -->
+                      <div class="mt-1.5">
+                        <span class="inline-flex items-center rounded-md border border-[#C9DDF4] bg-[#F3F8FE] px-2 py-0.5 text-[11.5px] font-medium text-[#4870A6]">
+                          {pub.venue}{pub.year ? ` · ${pub.year}` : ''}
+                        </span>
+                      </div>
+
+                      <!-- Authors -->
+                      {authorData.isLong ? (
+                        <div
+                          class="author-wrap mt-2 cursor-pointer text-[13.5px] leading-relaxed text-[#475569]"
+                          title="Hover or tap to view all authors"
+                        >
+                          <div class="author-collapsible">
+                            <span>
+                              <span set:html={authorData.shortHtml} />
+                              <span class="ml-1.5 inline-block rounded bg-[#E6F0FB] px-1.5 py-0.5 align-middle text-[11px] font-medium text-[#5E89C0]">
+                                +{authorData.hiddenCount} authors
+                              </span>
+                            </span>
+                          </div>
+                          <div class="author-expandable">
+                            <span set:html={authorData.fullHtml} />
+                          </div>
+                        </div>
+                      ) : (
+                        <p
+                          class="mt-2 text-[13.5px] leading-relaxed text-[#475569]"
+                          set:html={authorData.fullHtml}
+                        />
+                      )}
+
+                      <!-- Action Links -->
+                      <div class="mt-3.5 flex flex-wrap items-center gap-2">
+                        {pub.links?.pdf && (
+                          <a
+                            href={pub.links.pdf}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="rounded-md border border-[#DCE5F0] bg-white px-2.5 py-1 text-xs font-medium text-[#334155] transition hover:border-[#5E89C0] hover:bg-[#F3F8FE] hover:text-[#4870A6]"
+                          >
+                            PDF
+                          </a>
+                        )}
+                        {pub.links?.paper && (
+                          <a
+                            href={pub.links.paper}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="rounded-md border border-[#DCE5F0] bg-white px-2.5 py-1 text-xs font-medium text-[#334155] transition hover:border-[#5E89C0] hover:bg-[#F3F8FE] hover:text-[#4870A6]"
+                          >
+                            Paper
+                          </a>
+                        )}
+                        {pub.links?.page && (
+                          <a
+                            href={pub.links.page}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="rounded-md border border-[#C9DDF4] bg-[#F3F8FE] px-2.5 py-1 text-xs font-medium text-[#4870A6] transition hover:border-[#5E89C0] hover:bg-[#E6F0FB]"
+                          >
+                            Project Page
+                          </a>
+                        )}
+                        {pub.links?.blog && (
+                          <a
+                            href={pub.links.blog}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="rounded-md border border-[#C9DDF4] bg-[#F3F8FE] px-2.5 py-1 text-xs font-medium text-[#4870A6] transition hover:border-[#5E89C0] hover:bg-[#E6F0FB]"
+                          >
+                            Blog
+                          </a>
+                        )}
+                        {pub.links?.model && (
+                          <a
+                            href={pub.links.model}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="rounded-md border border-[#DCE5F0] bg-white px-2.5 py-1 text-xs font-medium text-[#334155] transition hover:border-[#5E89C0] hover:bg-[#F3F8FE] hover:text-[#4870A6]"
+                          >
+                            Model
+                          </a>
+                        )}
+                        {pub.links?.dataset && (
+                          <a
+                            href={pub.links.dataset}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="rounded-md border border-[#DCE5F0] bg-white px-2.5 py-1 text-xs font-medium text-[#334155] transition hover:border-[#5E89C0] hover:bg-[#F3F8FE] hover:text-[#4870A6]"
+                          >
+                            Dataset
+                          </a>
+                        )}
+                        {pub.links?.code && (
+                          <a
+                            href={pub.links.code}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="rounded-md border border-[#DCE5F0] bg-white px-2.5 py-1 text-xs font-medium text-[#334155] transition hover:border-[#5E89C0] hover:bg-[#F3F8FE] hover:text-[#4870A6]"
+                          >
+                            Code
+                          </a>
+                        )}
+                        {pub.links?.arxiv && (
+                          <a
+                            href={pub.links.arxiv}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="rounded-md border border-[#DCE5F0] bg-white px-2.5 py-1 text-xs font-medium text-[#334155] transition hover:border-[#5E89C0] hover:bg-[#F3F8FE] hover:text-[#4870A6]"
+                          >
+                            arXiv
+                          </a>
+                        )}
+                        {pub.links?.openreview && (
+                          <a
+                            href={pub.links.openreview}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="rounded-md border border-[#DCE5F0] bg-white px-2.5 py-1 text-xs font-medium text-[#334155] transition hover:border-[#5E89C0] hover:bg-[#F3F8FE] hover:text-[#4870A6]"
+                          >
+                            OpenReview
+                          </a>
+                        )}
+                        {pub.links?.pubmed && (
+                          <a
+                            href={pub.links.pubmed}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="rounded-md border border-[#DCE5F0] bg-white px-2.5 py-1 text-xs font-medium text-[#334155] transition hover:border-[#5E89C0] hover:bg-[#F3F8FE] hover:text-[#4870A6]"
+                          >
+                            PubMed
+                          </a>
+                        )}
+                        {pub.bibtex && (
+                          <button
+                            type="button"
+                            class="copy-bib-btn rounded-md border border-[#DCE5F0] bg-white px-2.5 py-1 text-xs font-medium text-[#334155] transition hover:border-[#5E89C0] hover:bg-[#F3F8FE] hover:text-[#4870A6] cursor-pointer"
+                            data-bibtex={pub.bibtex}
+                          >
+                            BibTeX
+                          </button>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              );
+            })}
+          </div>
+        </section>
+
+        <footer class="border-t border-[#EEF2F6] pt-6 text-xs text-[#94A3B8]">
+          © {new Date().getFullYear()} Josiah Aklilu. Built with Astro & Tailwind CSS.
+        </footer>
+      </main>
+    </div>
+  </div>
+
+  <script is:inline>
+    const emailBtn = document.getElementById('copy-email-btn');
+    emailBtn?.addEventListener('click', async () => {
+      const email = emailBtn.getAttribute('data-email');
+      if (!email) return;
+      await navigator.clipboard.writeText(email);
+      window.showToast?.('Email copied to clipboard');
+    });
+
+    document.querySelectorAll('.copy-bib-btn').forEach((btn) => {
+      btn.addEventListener('click', async () => {
+        const bib = btn.getAttribute('data-bibtex');
+        if (!bib) return;
+        await navigator.clipboard.writeText(bib);
+        window.showToast?.('BibTeX copied to clipboard');
+      });
+    });
+
+    document.querySelectorAll('.author-wrap').forEach((el) => {
+      el.addEventListener('click', () => {
+        el.classList.toggle('is-expanded');
+      });
+    });
+
+    let activeFilter = 'all';
+    const searchInput = document.getElementById('pub-search');
+    const cards = Array.from(document.querySelectorAll('.pub-card'));
+    const countEl = document.getElementById('pub-count');
+
+    const updateList = () => {
+      const q = (searchInput?.value || '').trim().toLowerCase();
+      let visible = 0;
+
+      cards.forEach((card) => {
+        const tags = (card.getAttribute('data-tags') || '').split(',');
+        const blob = card.getAttribute('data-search') || '';
+        const matchesFilter = activeFilter === 'all' || tags.includes(activeFilter);
+        const matchesQuery = !q || blob.includes(q);
+        const show = matchesFilter && matchesQuery;
+        card.style.display = show ? '' : 'none';
+        if (show) visible++;
+      });
+
+      if (countEl) countEl.textContent = `(${visible})`;
+    };
+
+    document.querySelectorAll('.filter-btn').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        activeFilter = btn.getAttribute('data-filter') || 'all';
+        document.querySelectorAll('.filter-btn').forEach((b) => {
+          const isActive = b === btn;
+          b.className = `filter-btn rounded-md px-3 py-1.5 text-[13px] font-medium transition cursor-pointer ${
+            isActive
+              ? 'border border-[#5E89C0] bg-[#5E89C0] text-white'
+              : 'border border-[#E8EDF4] bg-[#FAFBFC] text-[#475569] hover:border-[#A8C4E8] hover:bg-[#F3F8FE] hover:text-[#4870A6]'
+          }`;
+        });
+        updateList();
+      });
+    });
+
+    searchInput?.addEventListener('input', updateList);
+  </script>
+</Layout>

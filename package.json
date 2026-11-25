@@ -1,0 +1,29 @@
+{
+  "name": "josaklil-ai.github.io",
+  "version": "1.0.0",
+  "description": "[![LICENSE](https://img.shields.io/github/license/Xiao-Chenguang/minimal-light?style=flat-square&logo=creative-commons&color=EF9421)](https://github.com/Xiao-Chenguang/minimal-light/blob/main/LICENSE)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josaklil-ai/josaklil-ai.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/josaklil-ai/josaklil-ai.github.io/issues"
+  },
+  "homepage": "https://github.com/josaklil-ai/josaklil-ai.github.io#readme",
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.11",
+    "astro": "^5.11.0",
+    "tailwindcss": "^4.1.11"
+  }
+}

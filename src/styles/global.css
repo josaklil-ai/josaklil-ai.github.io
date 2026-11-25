@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Google Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --color-jacket-highlight: #B5CDEF;
+  --color-jacket-light: #A8C4E8;
+  --color-jacket-mid: #8FAED7;
+  --color-jacket-accent: #5E89C0;
+  --color-jacket-deep: #4870A6;
+  --color-jacket-wash: #F3F8FE;
+  --color-card-bg: #FAFBFC;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+    background-color: #FFFFFF;
+  }
+}
+
+.pub-card {
+  background-color: var(--color-card-bg);
+  border: 1px solid #E8EDF4;
+  border-radius: 10px;
+  box-shadow:
+    0 1px 2px rgba(15, 23, 42, 0.03),
+    0 1px 0 rgba(255, 255, 255, 0.9) inset;
+  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
+}
+
+.pub-card:hover {
+  background-color: #FFFFFF;
+  border-color: var(--color-jacket-light);
+  transform: translateY(-1px);
+  box-shadow:
+    0 8px 24px rgba(143, 174, 215, 0.22),
+    0 1px 3px rgba(15, 23, 42, 0.04);
+}
+
+/* Minimal scrollbar for compact News box */
+.news-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #C9DDF4 transparent;
+}
+.news-scroll::-webkit-scrollbar {
+  width: 5px;
+}
+.news-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.news-scroll::-webkit-scrollbar-thumb {
+  background-color: #C9DDF4;
+  border-radius: 999px;
+}
+.news-scroll::-webkit-scrollbar-thumb:hover {
+  background-color: #8FAED7;
+}
+
+/* Smooth hover/tap author expansion for long author lists */
+.author-collapsible {
+  display: grid;
+  grid-template-rows: 1fr;
+  opacity: 1;
+  transition: grid-template-rows 240ms cubic-bezier(0.22, 1, 0.36, 1), opacity 180ms ease;
+}
+.author-collapsible > span {
+  overflow: hidden;
+}
+
+.author-expandable {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition: grid-template-rows 260ms cubic-bezier(0.22, 1, 0.36, 1), opacity 220ms ease;
+}
+.author-expandable > span {
+  overflow: hidden;
+}
+
+.author-wrap:hover .author-collapsible,
+.author-wrap.is-expanded .author-collapsible {
+  grid-template-rows: 0fr;
+  opacity: 0;
+}
+
+.author-wrap:hover .author-expandable,
+.author-wrap.is-expanded .author-expandable {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
