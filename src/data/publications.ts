@@ -3,7 +3,6 @@ export interface Publication {
   authors: string;
   venue: string;
   year: string;
-  image?: string;
   categories: string[];
   links?: {
     pdf?: string;
@@ -137,7 +136,6 @@ export const publications: Publication[] = [
     authors: 'Josiah Aklilu*, Joshua A. Villarreal*, Chloe K. Nobuhara, Charlotte Egeland, Xiaohan Wang, Elaine Sui, Alan Brown, Matthew Leipzig, Reid Dale, Anita Rau, Alfred Song, Shelly Goel, Eric C. Sorenson, Vanessa Palter, Roger Bohn, Teodor Grantcharov, Jeffrey K. Jopling, Serena Yeung-Levy',
     venue: 'medRxiv',
     year: '2025',
-    image: '/img/mc1.png',
     categories: ['first-author', 'surgical-ai', 'preprint'],
     links: {
       pdf: 'https://www.medrxiv.org/content/10.1101/2025.11.24.25340912v1.full.pdf',
@@ -170,7 +168,6 @@ export const publications: Publication[] = [
     authors: 'Josiah Aklilu, Xiaohan Wang, Serena Yeung-Levy',
     venue: 'CVPR Workshop (VidLLMs)',
     year: '2025',
-    image: '/img/zeal.png',
     categories: ['first-author', 'multimodal'],
     links: {
       pdf: 'https://arxiv.org/pdf/2410.14340',
@@ -192,7 +189,6 @@ export const publications: Publication[] = [
     authors: 'Yuhui Zhang, Yuchang Su, Yiming Liu, Xiaohan Wang, James Burgess, Elaine Sui, Chenyu Wang, Josiah Aklilu, Alejandro Lozano, Anjiang Wei, Ludwig Schmidt, Serena Yeung-Levy',
     venue: 'CVPR',
     year: '2025',
-    image: '/img/autoconverter.png',
     categories: ['multimodal'],
     links: {
       pdf: 'https://openaccess.thecvf.com/content/CVPR2025/papers/Zhang_Automated_Generation_of_Challenging_Multiple-Choice_Questions_for_Vision_Language_Model_CVPR_2025_paper.pdf',
@@ -211,7 +207,6 @@ export const publications: Publication[] = [
     authors: 'Alejandro Lozano, Min Woo Sun, James Burgess, Liangyu Chen, Jeffrey J. Nirschl, Jeffrey Gu, Ivan Lopez, Josiah Aklilu, Austin Wolfgang Katzer, Collin Chiu, Anita Rau, Xiaohan Wang, Yuhui Zhang, Alfred Seunghoon Song, Robert Tibshirani, Serena Yeung-Levy',
     venue: 'CVPR',
     year: '2025',
-    image: '/img/biomedica.png',
     categories: ['multimodal'],
     links: {
       pdf: 'https://arxiv.org/pdf/2501.07171',
@@ -234,7 +229,6 @@ export const publications: Publication[] = [
     authors: 'Griffin H. Olsen, Emmett D. Goodman, Josiah G. Aklilu, Sebastiano Bartoletti, Kay S. Hung, Janice H. Yang, Eric C. Sorenson, Jeffrey K. Jopling, Serena Y. Yeung, Dan E. Azagury',
     venue: 'Surgical Endoscopy',
     year: '2025',
-    image: '/img/pgs.png',
     categories: ['surgical-ai'],
     links: {
       paper: 'https://link.springer.com/article/10.1007/s00464-025-12015-6',
@@ -255,7 +249,6 @@ export const publications: Publication[] = [
     authors: 'Anita Rau, Mark Endo, Josiah Aklilu, Jaewoo Heo, Khaled Saab, Alberto Paderno, Jeffrey Jopling, F. Christopher Holsinger, Serena Yeung-Levy',
     venue: 'arXiv',
     year: '2025',
-    image: '/img/surgvlm.png',
     categories: ['surgical-ai', 'multimodal', 'preprint'],
     links: {
       pdf: 'https://arxiv.org/pdf/2504.02799',
@@ -278,7 +271,6 @@ export const publications: Publication[] = [
     authors: 'Alejandro Lozano, Min Woo Sun, James Burgess, Jeffrey J. Nirschl, Christopher Polzak, Yuhui Zhang, Liangyu Chen, Jeffrey Gu, Ivan Lopez, Josiah Aklilu, Anita Rau, Austin Wolfgang Katzer, Collin Chiu, Orr Zohar, Xiaohan Wang, Alfred Seunghoon Song, Chiang Chia-Chun, Robert Tibshirani, Serena Yeung-Levy',
     venue: 'arXiv',
     year: '2025',
-    image: '/img/largescale.png',
     categories: ['multimodal', 'preprint'],
     links: {
       pdf: 'https://arxiv.org/pdf/2503.22727',
@@ -300,7 +292,6 @@ export const publications: Publication[] = [
     authors: 'Josiah G. Aklilu, Min Woo Sun, Shelly Goel, Sebastiano Bartoletti, Anita Rau, Griffin Olsen, Kay S. Hung, Sophie L. Mintz, Vicki Luong, Arnold Milstein, Mark J. Ott, Robert Tibshirani, Jeffrey K. Jopling, Eric C. Sorenson, Dan E. Azagury, Serena Yeung-Levy',
     venue: 'NEJM AI',
     year: '2024',
-    image: '/img/nejm_ai.png',
     categories: ['first-author', 'surgical-ai'],
     links: {
       paper: 'https://ai.nejm.org/doi/full/10.1056/AIoa2300088',
@@ -324,7 +315,6 @@ export const publications: Publication[] = [
     authors: 'Sanket Rajan Gupte*, Josiah Aklilu*, Jeffrey J. Nirschl, Serena Yeung-Levy',
     venue: 'TMLR',
     year: '2024',
-    image: '/img/revisit.png',
     categories: ['first-author', 'multimodal'],
     links: {
       pdf: 'https://arxiv.org/pdf/2401.14555',
@@ -345,7 +335,6 @@ export const publications: Publication[] = [
     authors: 'Anita Rau, Josiah Aklilu, F. Christopher Holsinger, Serena Yeung-Levy',
     venue: 'ECCV',
     year: '2024',
-    image: '/img/depth.png',
     categories: ['surgical-ai'],
     links: {
       pdf: 'https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/08062.pdf',
@@ -367,7 +356,6 @@ export const publications: Publication[] = [
     authors: 'Josiah Aklilu, Serena Yeung-Levy',
     venue: 'MLHC',
     year: '2022',
-    image: '/img/alges.png',
     categories: ['first-author', 'surgical-ai'],
     links: {
       pdf: 'https://proceedings.mlr.press/v182/aklilu22a/aklilu22a.pdf',
